@@ -1,0 +1,33 @@
+{
+    "name": "laravel-admin-ext/file-upload",
+    "description": "upload file direct",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/laravel-admin-ext/file-upload",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mamba_one",
+            "email": "abcde666111@126.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Encore\\FileUpload\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Encore\\FileUpload\\FileUploadServiceProvider"
+            ]
+        }
+    }
+}
