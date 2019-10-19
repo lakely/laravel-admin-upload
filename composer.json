@@ -1,13 +1,13 @@
 {
-    "name": "laravel-admin-ext/file-upload",
-    "description": "upload file direct",
+    "name": "lakely/laravel-admin-upload",
+    "description": "laravel admin upload file direct",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/laravel-admin-ext/file-upload",
+    "homepage": "https://github.com/lakely/laravel-admin-upload",
     "license": "MIT",
     "authors": [
         {
-            "name": "mamba_one",
+            "name": "lakely",
             "email": "abcde666111@126.com"
         }
     ],
