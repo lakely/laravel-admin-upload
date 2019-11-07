@@ -8,7 +8,7 @@ Web direct upload, and can combine with upload manager system(if you application
 ####Install
 ```
 composer require lakely/laravel-admin-upload
-php artisan vendor:publish --provider=Encore\FileUpload\FileUploadServiceProvider
+php artisan vendor:publish --tag=laravel-admin-upload
 ```
 
 ```
