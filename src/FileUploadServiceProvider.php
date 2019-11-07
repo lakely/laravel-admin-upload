@@ -1,6 +1,6 @@
 <?php
 
-namespace Encore\FileUpload;
+namespace Lakely\LaravelAdminUpload;
 
 use Encore\Admin\Admin;
 use Encore\Admin\Form;
@@ -18,13 +18,13 @@ class FileUploadServiceProvider extends ServiceProvider
         }
 
         if ($views = $extension->views()) {
-            $this->loadViewsFrom($views, 'file-upload');
+            $this->loadViewsFrom($views, 'laravel-admin-upload');
         }
 
         if ($this->app->runningInConsole() && $assets = $extension->assets()) {
             $this->publishes(
-                [$assets => public_path('vendor/laravel-admin-ext/file-upload')],
-                'file-upload'
+                [$assets => public_path('vendor/lakely/laravel-admin-upload')],
+                'laravel-admin-upload'
             );
         }
 

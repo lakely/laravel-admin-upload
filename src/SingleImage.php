@@ -1,20 +1,20 @@
 <?php
 
-namespace Encore\FileUpload;
+namespace Lakely\LaravelAdminUpload;
 
 use Encore\Admin\Form\Field;
 
 class SingleImage extends Field
 {
-    protected $view = 'file-upload::single-image';
+    protected $view = 'laravel-admin-upload::single-image';
 
     protected static $css = [
-        'vendor/laravel-admin-ext/file-upload/style.css',
+        'vendor/lakely/laravel-admin-upload/style.css',
     ];
 
     protected static $js = [
-        'vendor/laravel-admin-ext/file-upload/plupload-2.1.2/js/plupload.full.min.js',
-        'vendor/laravel-admin-ext/file-upload/upload.js',
+        'vendor/lakely/laravel-admin-upload/plupload-2.1.2/js/plupload.full.min.js',
+        'vendor/lakely/laravel-admin-upload/upload.js',
     ];
 
     public function prepare($value)

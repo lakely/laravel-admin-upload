@@ -1,12 +1,12 @@
 <?php
 
-namespace Encore\FileUpload;
+namespace Lakely\LaravelAdminUpload;
 
 use Encore\Admin\Extension;
 
 class FileUpload extends Extension
 {
-    public $name = 'file-upload';
+    public $name = 'laravel-admin-upload';
 
     public $views = __DIR__.'/../resources/views';
 

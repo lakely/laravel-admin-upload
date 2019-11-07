@@ -20,13 +20,13 @@
     },
     "autoload": {
         "psr-4": {
-            "Encore\\FileUpload\\": "src/"
+            "Lakely\\LaravelAdminUpload\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Encore\\FileUpload\\FileUploadServiceProvider"
+                "Lakely\\LaravelAdminUpload\\FileUploadServiceProvider"
             ]
         }
     }
