@@ -91,7 +91,7 @@
   }
 
   // 图片上传
-  window.init_upload = function(id, multi, token){
+  window.init_upload = function(id, input_name, multi, token){
     var element = $('#'+id);
     var upload_warp = multi ? $(element.attr('data-warp')) : element.parents('.Js_upload_warp');
     var container = $('<div style="height:0px;width:0px;display:none"></div>').appendTo(upload_warp);
@@ -151,14 +151,15 @@
             for(let upload_id in result.data) {
               let path = result.data[upload_id];
               let all_path = result.data[upload_id];
-              let collumn_name = id.slice(0, -7);
+              let collumn_name = input_name;
+              let single_id_name = id.slice(0, -7);
 
               if (multi) {
                 $('#' + file.id).html('<span class="upload_del_btn" data-filename="' + path + '" onclick="' + "del_pic(this,true)" + '">删除</span><img src="' + all_path + '?x-oss-process=image/resize,m_fill,w_100,h_100"><input type="hidden" class="Js_upload_input" name="'+ collumn_name + '[' + upload_id + ']" value="' + all_path +'">');
               } else {
                 $('#' + file.id + '_canvas').remove();
                 upload_warp.prepend('<img data-filename="' + path + '" src="' + all_path + '?x-oss-process=image/resize,m_fill,w_100,h_100">');
-                upload_warp.prepend('<input type="hidden" class="Js_upload_input_id" name="' + collumn_name +'_id" value="'+ upload_id +'">').find('input.Js_upload_input').val(path);
+                upload_warp.prepend('<input type="hidden" class="Js_upload_input_id" name="' + single_id_name +'_id" value="'+ upload_id +'">').find('input.Js_upload_input').val(path);
               }
             }
           }

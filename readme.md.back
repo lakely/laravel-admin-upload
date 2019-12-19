@@ -83,6 +83,14 @@ logo_id: "31",
 logo: "https://liuy-test.oss-cn-beijing.aliyuncs.com/images/201906/27/a1719d4f3791f3f88eb4b2446160a4f9.jpg",
 ```
 
+######如为关联时，比如
+```
+$form->singleImage('user.logo', 'LOGO');
+
+user_logo_id: '31',
+user[logo]: 'http://sssss.xxxx',
+```
+
 >>`multiImage` like this:
 
 ```

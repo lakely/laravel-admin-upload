@@ -24,10 +24,11 @@ class SingleImage extends Field
 
     public function render()
     {
+        $id = $this->formatId($this->column);
         $name = $this->formatName($this->column);
         $token = csrf_token();
         $this->script = <<<EOT
-init_upload('{$name}_upload',false,'{$token}');
+init_upload('{$id}_upload', '{$name}', false,'{$token}');
 EOT;
         return parent::render();
     }
